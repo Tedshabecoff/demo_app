@@ -1,0 +1,2 @@
+module SpacecatsHelper
+end

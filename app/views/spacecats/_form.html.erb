@@ -1,0 +1,29 @@
+<%= form_for(@spacecat) do |f| %>
+  <% if @spacecat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@spacecat.errors.count, "error") %> prohibited this spacecat from being saved:</h2>
+
+      <ul>
+      <% @spacecat.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :planets_visitd %><br />
+    <%= f.number_field :planets_visitd %>
+  </div>
+  <div class="field">
+    <%= f.label :planet %><br />
+    <%= f.text_field :planet %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

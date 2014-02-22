@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @spacecat.name %>
+</p>
+
+<p>
+  <b>Planets visitd:</b>
+  <%= @spacecat.planets_visitd %>
+</p>
+
+<p>
+  <b>Planet:</b>
+  <%= @spacecat.planet %>
+</p>
+
+
+<%= link_to 'Edit', edit_spacecat_path(@spacecat) %> |
+<%= link_to 'Back', spacecats_path %>
